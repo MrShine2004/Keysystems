@@ -28,7 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,7 +40,6 @@ INSTALLED_APPS = [
     'data',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -61,13 +59,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-]
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080/",
-    "http://127.0.0.1:8080/",
 ]
 
 ROOT_URLCONF = 'mysite.urls'
