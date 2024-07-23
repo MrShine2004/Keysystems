@@ -62,6 +62,28 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_HEADERS = [
+    'content-disposition',
+    'accept-encoding',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'access-control-allow-methods',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
@@ -79,12 +101,6 @@ TEMPLATES = [
         },
     },
 ]
-
-CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOW_HEADERS = ('content-disposition', 'accept-encoding',
-                      'content-type', 'accept', 'origin', 'Authorization',
-                      'access-control-allow-methods')
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
