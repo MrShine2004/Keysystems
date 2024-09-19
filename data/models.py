@@ -32,6 +32,7 @@ class Car(models.Model):
     year = models.IntegerField(verbose_name="Год производства")
     country = models.ForeignKey(Country, verbose_name="Страна производства", on_delete=models.CASCADE)
     parts = models.ManyToManyField(Parts, verbose_name="Запчасти", related_name="cars")
+    image = models.ImageField(upload_to='cars/', verbose_name="Изображение", null=True, blank=True)
 
     def __str__(self):
         return f"{self.brand} {self.model} {self.year}"
