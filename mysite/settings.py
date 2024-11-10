@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-6g4g(s%(*vqu#5^4jt=bgx$qm@xzo-wo!ghk785(5di@y2l3*%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', "http://localhost:8080", ".netlify.app"]
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -55,6 +56,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
